@@ -1,0 +1,10 @@
+C:\Users\Misha\Desktop\SecureNative\SecureNative.SDK\Securenative.Sample\bin\Debug\Securenative.Sample.exe
+C:\Users\Misha\Desktop\SecureNative\SecureNative.SDK\Securenative.Sample\bin\Debug\Securenative.Sample.pdb
+C:\Users\Misha\Desktop\SecureNative\SecureNative.SDK\Securenative.Sample\bin\Debug\SecureNative.SDK.dll
+C:\Users\Misha\Desktop\SecureNative\SecureNative.SDK\Securenative.Sample\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Misha\Desktop\SecureNative\SecureNative.SDK\Securenative.Sample\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Misha\Desktop\SecureNative\SecureNative.SDK\Securenative.Sample\obj\Debug\Securenative.Sample.csprojAssemblyReference.cache
+C:\Users\Misha\Desktop\SecureNative\SecureNative.SDK\Securenative.Sample\obj\Debug\Securenative.Sample.csproj.CoreCompileInputs.cache
+C:\Users\Misha\Desktop\SecureNative\SecureNative.SDK\Securenative.Sample\obj\Debug\Securenative.Sample.csproj.CopyComplete
+C:\Users\Misha\Desktop\SecureNative\SecureNative.SDK\Securenative.Sample\obj\Debug\Securenative.Sample.exe
+C:\Users\Misha\Desktop\SecureNative\SecureNative.SDK\Securenative.Sample\obj\Debug\Securenative.Sample.pdb
