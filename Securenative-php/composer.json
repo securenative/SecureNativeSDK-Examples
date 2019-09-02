@@ -1,0 +1,32 @@
+{
+  "name": "securenative/sdk-example",
+  "description": "PHP SKD example",
+  "type": "project",
+  "version": "0.0.2",
+  "keywords": [
+    "securenative", "sdk", "security","monitoring"
+  ],
+  "homepage": "https://github.com/securenative/securenative-php",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "SecureNative",
+      "email": "team@securenative.com",
+      "homepage": "https://securenative.com",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "classmap": [
+      "./"
+    ]
+  },
+  "require": {
+    "php": ">=7.2.0",
+    "securenative/securenative-php": "v1.0.6"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "*",
+    "php-coveralls/php-coveralls": "*"
+  }
+}
