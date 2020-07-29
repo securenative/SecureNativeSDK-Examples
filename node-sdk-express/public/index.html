@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      (window.securenative = window.securenative || []),
+        (securenative.load = function(a) {
+          if (!("SecureNative" in window || window.securenative.loading)) {
+            (window.securenative.loading = !0),
+              (window.securenative.options = a);
+            var b = document.createElement("script");
+            (b.src = "sn-client.min.js"), (b.async = 1);
+            var c = document.getElementsByTagName("script")[0];
+            c.parentNode.insertBefore(b, c);
+          }
+        });
+      securenative.load({
+        appId: "SN-A8737B17F3",
+        mode: "fp",
+        endpoint: "https://api.securenative-stg.com/collector/api/v1/collect"
+      });
+    </script>
+  </head>
+
+  <body>
+    <h1>Welcome to SecureNative demo app</h1>
+
+    <form action="/login">
+      <button type="submit">Login</button>
+    </form>
+
+    <form action="/logout">
+      <button type="submit">Logout</button>
+    </form>
+
+    <form action="/failed">
+      <button type="submit">Fail Login</button>
+    </form>
+
+    <form action="/verify">
+      <button type="submit">Verify</button>
+    </form>
+
+    <form action="/webhook">
+      <button type="submit">Webhook</button>
+    </form>
+  </body>
+</html>
