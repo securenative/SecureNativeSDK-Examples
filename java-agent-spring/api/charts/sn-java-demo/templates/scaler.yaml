@@ -1,0 +1,12 @@
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: {{ include "sn-java-demo.fullname" . }}
+spec:
+  maxReplicas: {{ .Values.scale.max }}
+  minReplicas: {{ .Values.scale.min }}
+  scaleTargetRef:
+    apiVersion: extensions/v1
+    kind: Deployment
+    name: sn-java-demo
+  targetCPUUtilizationPercentage: {{ .Values.scale.cpu }}

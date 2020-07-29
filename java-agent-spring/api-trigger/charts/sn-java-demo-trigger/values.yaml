@@ -1,0 +1,51 @@
+# Default values for sn-java-demo-trigger.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+image:
+  repository: ""
+  tag: ""
+  pullPolicy: IfNotPresent
+
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  type: ClusterIP
+  ports:
+    - port: 8080
+      name: metric
+      protocol: TCP
+      targetPort: 8080
+
+ingress:
+  enabled: false
+  paths: ['/javademotrigger/','/javademotrigger/']
+  hosts:
+    - "api.securenative-stg.com"
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+monitor: "prom-operator-fr-stg"
+
+scale:
+  min: 1
+  max: 10
+  cpu: 85
+
+resources:
+  requests:
+    memory: "100Mi"
+    cpu: "100m"
+  limits:
+    memory: "400Mi"
+    cpu: "1000m"
+
+secrets:
+  BASE_URL: "http://sn-java-demo.default.svc.cluster.local:8080"
+  EXECUTE_DELAY: "0"
+  EXECUTE_PERIOD: "300000"
