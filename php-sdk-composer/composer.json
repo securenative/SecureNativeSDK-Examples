@@ -1,0 +1,5 @@
+{
+    "require": {
+        "securenative/securenative-php": "^1.0.15"
+    }
+}
