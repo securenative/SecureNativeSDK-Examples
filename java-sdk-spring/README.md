@@ -1,4 +1,4 @@
-# SecureNative Java Demo
+SecureNative Java Demo
 Setting up testing environment
 Add the following Environment Variables:
 
