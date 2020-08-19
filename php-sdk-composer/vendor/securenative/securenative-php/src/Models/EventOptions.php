@@ -35,7 +35,6 @@ class EventOptions
     }
 
     private function set($data){
-        Logger::debug("data", $data);
         $this->event = isset($data[self::EVENT]) ? $data[self::EVENT] : null;
         $this->userId = isset($data[self::EVENT_USER_ID]) ? $data[self::EVENT_USER_ID] : null;
 
@@ -50,12 +49,11 @@ class EventOptions
 
         if (isset($data[self::EVENT_CONTEXT])) {
             $context = $data[self::EVENT_CONTEXT];
-//            Logger::debug("Event_Context client token", $context[self::EVENT_CONTEXT_CLIENT_TOKEN]);
             $this->context = new Context(
                 isset($context[self::EVENT_CONTEXT_CLIENT_TOKEN]) ? $context[self::EVENT_CONTEXT_CLIENT_TOKEN] : '',
                 isset($context[self::EVENT_CONTEXT_IP]) ? $context[self::EVENT_CONTEXT_IP] : '',
                 isset($context[self::EVENT_CONTEXT_REMOTE_IP]) ? $context[self::EVENT_CONTEXT_REMOTE_IP] : '',
-                isset($context[self::EVENT_CONTEXT_HEADERS]) ? $context[self::EVENT_CONTEXT_HEADERS] : '',
+                isset($context[self::EVENT_CONTEXT_HEADERS]) ? $context[self::EVENT_CONTEXT_HEADERS] : (object)[],
                 isset($context[self::EVENT_CONTEXT_URL]) ? $context[self::EVENT_CONTEXT_URL] : '',
                 isset($context[self::EVENT_CONTEXT_METHOD]) ? $context[self::EVENT_CONTEXT_METHOD] : ''
             );

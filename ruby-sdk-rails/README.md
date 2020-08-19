@@ -1,8 +1,24 @@
-# SecureNative Ruby Demo
+# README
 
-ruby-sdk-rails is an example app to demonstrate the use of `SecureNative SDK` ruby implementation.
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-## Setting up testing environment
-Add the following Environment Variables:
-* SECURENATIVE_API_KEY
-* SECURENATIVE_CLIENT_TOKEN
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...

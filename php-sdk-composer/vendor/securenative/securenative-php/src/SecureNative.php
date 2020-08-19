@@ -12,24 +12,22 @@ class SecureNative
     private static $eventManager;
     private static $middleware;
 
-    public static function init($apiKey, SecureNativeOptions $secureNativeOptions = null)
+    public static function init($apiKey, SecureNativeOptions $secureNativeOptions)
     {
         if ($apiKey == '') {
             throw new \Exception('You must pass your SecureNative api key');
         }
+        Logger::init($secureNativeOptions);
 
         self::$apiKey = $apiKey;
-        self::$options = isset($secureNativeOptions) ? $secureNativeOptions : new SecureNativeOptions();
+        self::$options = $secureNativeOptions;
         self::$eventManager = new EventManager($apiKey, self::$options);
         self::$middleware = new Middleware($apiKey);
-        Logger::init(self::$options);
     }
 
     public static function track(Array $attributes)
     {
         $opts = new EventOptions(json_encode($attributes));
-
-        Logger::debug("Track OPTS", $opts);
 
         if ($attributes == null || count($attributes) == 0) {
             throw new Exception("Can't send empty attributes");
@@ -46,7 +44,6 @@ class SecureNative
 
     public static function verify(Array $attributes)
     {
-        Logger::debug("Attr", $attributes);
         $opts = new EventOptions(json_encode($attributes));
         $requestUrl = sprintf('%s/verify', self::$options->getApiUrl());
         $event = self::$eventManager->buildEvent($opts);

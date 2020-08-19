@@ -1,5 +1,5 @@
 {
     "require": {
-        "securenative/securenative-php": "^1.0"
+        "securenative/securenative-php": "v1.0.18"
     }
 }

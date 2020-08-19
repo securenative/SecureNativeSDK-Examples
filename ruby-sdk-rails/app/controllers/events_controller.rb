@@ -1,36 +1,37 @@
 require 'securenative'
-require 'securenative/event_type'
-require 'securenative/event_options'
 
 class EventsController < ApplicationController
   begin
-    SecureNative.init("YOUR API KEY", options: SecureNativeOptions.new)
-  rescue SecureNativeSDKException => e
-    # Do some error handling
+    SecureNative.SecureNative.init_with_api_key('YOUR_API_KEY')
+  rescue SecureNativeSDKError => e
     print(e)
   end
 
   def verify
-    res = SecureNative.verify(Event.new(
-        event_type = EventTypes::LOG_IN,
-        user: User.new("1", "Jon Snow", "jon@snow.com", "+12012673412"),
-        ip: "1.2.3.4",
-        remote_ip: "5.6.7.8",
-        user_agent: "Mozilla/5.0 (Linux; U; Android 4.4.2; zh-cn; GT-I9500 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko)Version/4.0 MQQBrowser/5.0 QQ-URL-Manager Mobile Safari/537.36",
-        sn_cookie: "cookie"))
+    securenative = SecureNative.instance
+    context = securenative.context_builder(client_token: 'SECURED_CLIENT_TOKEN', ip: '127.0.0.1',
+                                           headers: { 'user-agent' => 'Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B405' })
+
+    event_options = EventOptions.new(event_type: EventTypes::LOG_IN,
+                                     user_id: '1234', user_traits: UserTraits.new(name: 'Your Name', email: 'name@gmail.com', phone: '+1234567890'),
+                                     context: context, properties: { "custom_param1": 'CUSTOM_PARAM_VALUE', "custom_param2": true, "custom_param=3": 3 }).build
+
+    securenative.verify(event_options)
 
     @message = res
   end
 
   def track
-    SecureNative.track(Event.new(
-        event_type = EventTypes::SIGN_UP,
-        user: User.new("1", "Jon Snow", "jon@snow.com", "+12012673412"),
-        ip: "1.2.3.4",
-        remote_ip: "5.6.7.8",
-        user_agent: "Mozilla/5.0 (Linux; U; Android 4.4.2; zh-cn; GT-I9500 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko)Version/4.0 MQQBrowser/5.0 QQ-URL-Manager Mobile Safari/537.36",
-        sn_cookie: "cookie"))
+    securenative = SecureNative.instance
+    context = securenative.context_builder(client_token: 'SECURED_CLIENT_TOKEN', ip: '127.0.0.1',
+                                           headers: { 'user-agent' => 'Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B405' })
 
-    @message = "tracked"
+    event_options = EventOptions.new(event_type: EventTypes::LOG_IN,
+                                     user_id: '1234', user_traits: UserTraits.new(name: 'Your Name', email: 'name@gmail.com', phone: '+1234567890'),
+                                     context: context, properties: { "custom_param1": 'CUSTOM_PARAM_VALUE', "custom_param2": true, "custom_param=3": 3 }).build
+
+    securenative.track(event_options)
+
+    @message = 'tracked'
   end
 end
