@@ -9,6 +9,8 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
+  config.hosts << "c36df9b26c8c.ngrok.io"
+
   # Show full error reports.
   config.consider_all_requests_local = true
 

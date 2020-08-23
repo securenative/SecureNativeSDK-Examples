@@ -11,8 +11,7 @@ class SNClient(object):
         self.ip = "113.6.126.40"
         self.remote_ip = "155.88.195.17"
         self.options = SecureNative.config_builder(). \
-            with_api_key(os.getenv("SECURENATIVE_API_KEY")). \
-            with_api_url(os.getenv("SECURENATIVE_API_URL")). \
+            with_api_key("5084FE5857BCB8ACC023B5ACE73863CAD55E5C2D"). \
             with_log_level("DEBUG")
 
         self.sn_client = SecureNative.init("/Users/inbaltako/code/securenative-python-demo/securenative.ini")
