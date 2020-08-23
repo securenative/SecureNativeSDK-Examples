@@ -6,7 +6,5 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 # gem "rails"
 
-# gem 'securenative', '~> 0.1.21'
-gem "securenative", path: "/Users/inbaltako/code/securenative-ruby"
-
+gem 'securenative', '~> 0.1.21'
 gem "sinatra"

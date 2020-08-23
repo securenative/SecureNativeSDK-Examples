@@ -9,11 +9,11 @@ class EventsController < ApplicationController
   def initialize
     super
     begin
-      SecureNative.init_with_api_key('AB04941C3F99B08A300D46B328E734919BEC051A')
+      SecureNative.init_with_api_key('000000000000000000000000000000000')
 
       # SecureNative.init
 
-      # options = ConfigurationBuilder.new(api_key: 'AB04941C3F99B08A300D46B328E734919BEC051A', api_url: 'https://api.securenative.com/collector/api/v1')
+      # options = ConfigurationBuilder.new(api_key: '000000000000000000000000000000000', api_url: 'https://api.securenative.com/collector/api/v1')
       # SecureNative.init_with_options(options)
     rescue SecureNativeSDKError => e
       print(e)
