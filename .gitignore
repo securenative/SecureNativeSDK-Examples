@@ -890,3 +890,7 @@ MigrationBackup/
 .idea/
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,macos,linux,java,ruby,python,go,node,dotnetcore,jetbrains,visualstudio,visualstudiocode
+
+
+### PHP
+php-sdk-composer/vendor/
