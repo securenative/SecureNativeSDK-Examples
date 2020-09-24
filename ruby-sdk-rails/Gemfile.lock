@@ -1,8 +1,3 @@
-PATH
-  remote: /Users/inbaltako/code/securenative-ruby
-  specs:
-    securenative (0.1.23)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -211,7 +206,6 @@ DEPENDENCIES
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.2)
   sass-rails (>= 6)
-  securenative!
   selenium-webdriver
   spring (~> 1.1)
   spring-watcher-listen (~> 2.0.0)

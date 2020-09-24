@@ -6,39 +6,39 @@
     <orderEntry type="jdk" jdkName="RVM: ruby-2.7.0" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
-      <library name="securenative (v0.1.21) [path][gem]" type="rubylib">
+      <library name="securenative (v0.1.23) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />
         </properties>
         <CLASSES>
-          <root url="file://$USER_HOME$/code/securenative-ruby/bin" />
-          <root url="file://$USER_HOME$/code/securenative-ruby/lib" />
-          <root url="file://$USER_HOME$/code/securenative-ruby/out" />
-          <root url="file://$USER_HOME$/code/securenative-ruby/.git" />
-          <root url="file://$USER_HOME$/code/securenative-ruby/spec" />
-          <root url="file://$USER_HOME$/code/securenative-ruby/.idea" />
-          <root url="file://$USER_HOME$/code/securenative-ruby/.github" />
-          <root url="file://$USER_HOME$/code/securenative-ruby/coverage" />
+          <root url="file://$MODULE_DIR$/../../securenative-ruby/bin" />
+          <root url="file://$MODULE_DIR$/../../securenative-ruby/lib" />
+          <root url="file://$MODULE_DIR$/../../securenative-ruby/out" />
+          <root url="file://$MODULE_DIR$/../../securenative-ruby/.git" />
+          <root url="file://$MODULE_DIR$/../../securenative-ruby/spec" />
+          <root url="file://$MODULE_DIR$/../../securenative-ruby/.idea" />
+          <root url="file://$MODULE_DIR$/../../securenative-ruby/.github" />
+          <root url="file://$MODULE_DIR$/../../securenative-ruby/coverage" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="file://$USER_HOME$/code/securenative-ruby/bin" />
-          <root url="file://$USER_HOME$/code/securenative-ruby/lib" />
-          <root url="file://$USER_HOME$/code/securenative-ruby/out" />
-          <root url="file://$USER_HOME$/code/securenative-ruby/.git" />
-          <root url="file://$USER_HOME$/code/securenative-ruby/spec" />
-          <root url="file://$USER_HOME$/code/securenative-ruby/.idea" />
-          <root url="file://$USER_HOME$/code/securenative-ruby/.github" />
-          <root url="file://$USER_HOME$/code/securenative-ruby/coverage" />
+          <root url="file://$MODULE_DIR$/../../securenative-ruby/bin" />
+          <root url="file://$MODULE_DIR$/../../securenative-ruby/lib" />
+          <root url="file://$MODULE_DIR$/../../securenative-ruby/out" />
+          <root url="file://$MODULE_DIR$/../../securenative-ruby/.git" />
+          <root url="file://$MODULE_DIR$/../../securenative-ruby/spec" />
+          <root url="file://$MODULE_DIR$/../../securenative-ruby/.idea" />
+          <root url="file://$MODULE_DIR$/../../securenative-ruby/.github" />
+          <root url="file://$MODULE_DIR$/../../securenative-ruby/coverage" />
         </SOURCES>
         <excluded>
-          <root url="file://$USER_HOME$/code/securenative-ruby/bin" />
-          <root url="file://$USER_HOME$/code/securenative-ruby/out" />
-          <root url="file://$USER_HOME$/code/securenative-ruby/.git" />
-          <root url="file://$USER_HOME$/code/securenative-ruby/spec" />
-          <root url="file://$USER_HOME$/code/securenative-ruby/.idea" />
-          <root url="file://$USER_HOME$/code/securenative-ruby/.github" />
-          <root url="file://$USER_HOME$/code/securenative-ruby/coverage" />
+          <root url="file://$MODULE_DIR$/../../securenative-ruby/bin" />
+          <root url="file://$MODULE_DIR$/../../securenative-ruby/out" />
+          <root url="file://$MODULE_DIR$/../../securenative-ruby/.git" />
+          <root url="file://$MODULE_DIR$/../../securenative-ruby/spec" />
+          <root url="file://$MODULE_DIR$/../../securenative-ruby/.idea" />
+          <root url="file://$MODULE_DIR$/../../securenative-ruby/.github" />
+          <root url="file://$MODULE_DIR$/../../securenative-ruby/coverage" />
         </excluded>
       </library>
     </orderEntry>
