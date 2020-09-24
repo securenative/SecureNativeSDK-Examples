@@ -22,7 +22,7 @@ class EventsController < ApplicationController
 
   def verify
     securenative = SecureNative::SecureNative.instance
-    # context = SecureNative::SecureNativeContext.new(client_token: '6c21e765ef535008e17bc5d81911c5dc5d49ced464bb11397b61138fe7c69b4172d096d56110e0f1c3abe5eac832f76db4ccf62fdd5f9ab6d69ad9516846cc39ebdcde73ac4527aa73788187b54d684c9c8823ccff04e0c1e2689879349a7e86fc2cc053399f9b66c17fd76b649d8b33b8108a8b07a610e4dbf689159bfc963c35e2d3aa555b79418fd4a918fbfc86c78df9dbc19c9b3dd29d07711c07cd745b42101ddce2c6ebf7041a332be53b2b3e74cb0e8275c0e0614225f770b628562f', ip: '127.0.0.1',
+    # context = SecureNative::SecureNativeContext.new(client_token: ENV['SECURENATIVE_CLIENT_TOKEN'], ip: '127.0.0.1',
     #                                                 headers: { 'user-agent' => 'Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B405' })
 
     context = SecureNative::SecureNativeContext.from_http_request(request)
@@ -35,7 +35,7 @@ class EventsController < ApplicationController
 
   def track
     securenative = SecureNative::SecureNative.instance
-    context = SecureNative::SecureNativeContext.new(client_token: '6c21e765ef535008e17bc5d81911c5dc5d49ced464bb11397b61138fe7c69b4172d096d56110e0f1c3abe5eac832f76db4ccf62fdd5f9ab6d69ad9516846cc39ebdcde73ac4527aa73788187b54d684c9c8823ccff04e0c1e2689879349a7e86fc2cc053399f9b66c17fd76b649d8b33b8108a8b07a610e4dbf689159bfc963c35e2d3aa555b79418fd4a918fbfc86c78df9dbc19c9b3dd29d07711c07cd745b42101ddce2c6ebf7041a332be53b2b3e74cb0e8275c0e0614225f770b628562f', ip: '127.0.0.1',
+    context = SecureNative::SecureNativeContext.new(client_token: ENV['SECURENATIVE_CLIENT_TOKEN'], ip: '127.0.0.1',
                                                     headers: { 'user-agent' => 'Mozilla: Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.3 Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/43.4' })
 
     # context = SecureNative::SecureNativeContext.from_http_request(request)

@@ -27,7 +27,7 @@ public class DemoController {
     public DemoController() {
 
         // Options 1: Initialize via Config file
-        Path path = Paths.get("/Users/inbaltako/Downloads/java-sdk-spring/securenative.properties");
+        Path path = Paths.get(System.getenv("CONFIGURATION_PATH"));
         try {
             SecureNative.init(path);
         } catch (SecureNativeSDKException | SecureNativeConfigException e) {
