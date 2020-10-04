@@ -10,7 +10,7 @@ class EventsController < ApplicationController
 
       # SecureNative::Client.init
 
-      options = SecureNative::Config::ConfigurationBuilder.new(api_key: ENV['SECURENATIVE_API_KEY'], proxy_headers: ["CF-Connecting-IP"])
+      options = SecureNative::Config::ConfigurationBuilder.new(api_key: ENV['SECURENATIVE_API_KEY'], proxy_headers: ["Test-Header"])
       SecureNative::Client.init_with_options(options)
     rescue SecureNativeSDKError => e
       print(e)
@@ -23,8 +23,8 @@ class EventsController < ApplicationController
     #                                     headers: { 'user-agent' => 'Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B405' })
 
     context = securenative.from_http_request(request)
-    event_options = SecureNative::EventOptions.new(event: SecureNative::EventTypes::LOG_IN, user_id: '0007', context: context,
-                                                   user_traits: SecureNative::UserTraits.new(name: 'Ruby0007', email: 'test@gmail.com', phone: '+1234567890'))
+    event_options = SecureNative::EventOptions.new(event: SecureNative::EventTypes::LOG_IN, user_id: 'verify03', context: context,
+                                                   user_traits: SecureNative::UserTraits.new(name: 'verify03', email: 'test@gmail.com', phone: '+1234567890'))
 
     res = securenative.verify(event_options)
     @message = res.to_json
@@ -38,8 +38,8 @@ class EventsController < ApplicationController
     #                                     headers: { 'user-agent' => 'Mozilla: Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.3 Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/43.4' })
 
     context = securenative.from_http_request(request)
-    event_options = SecureNative::EventOptions.new(event: SecureNative::EventTypes::LOG_IN, user_id: '0010', context: context,
-                                                   user_traits: SecureNative::UserTraits.new(name: 'Proxy Header', email: 'test@gmail.com', phone: '+1234567890'),
+    event_options = SecureNative::EventOptions.new(event: SecureNative::EventTypes::LOG_IN, user_id: 'track03', context: context,
+                                                   user_traits: SecureNative::UserTraits.new(name: 'track03', email: 'test@gmail.com', phone: '+1234567890'),
                                                    properties: { custom_param1: 'CUSTOM_PARAM_VALUE', custom_param2: true, custom_param3: 3 })
 
     securenative.track(event_options)
