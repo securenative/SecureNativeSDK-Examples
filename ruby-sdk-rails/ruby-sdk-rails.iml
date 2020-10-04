@@ -26,40 +26,6 @@
     </content>
     <orderEntry type="jdk" jdkName="RVM: ruby-2.7.0" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library">
-      <library name="securenative (v[path]) [path][gem]" type="rubylib">
-        <properties>
-          <option name="version" value="4" />
-        </properties>
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/../../securenative-ruby/bin" />
-          <root url="file://$MODULE_DIR$/../../securenative-ruby/lib" />
-          <root url="file://$MODULE_DIR$/../../securenative-ruby/.git" />
-          <root url="file://$MODULE_DIR$/../../securenative-ruby/spec" />
-          <root url="file://$MODULE_DIR$/../../securenative-ruby/.idea" />
-          <root url="file://$MODULE_DIR$/../../securenative-ruby/.github" />
-          <root url="file://$MODULE_DIR$/../../securenative-ruby/coverage" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/../../securenative-ruby/bin" />
-          <root url="file://$MODULE_DIR$/../../securenative-ruby/lib" />
-          <root url="file://$MODULE_DIR$/../../securenative-ruby/.git" />
-          <root url="file://$MODULE_DIR$/../../securenative-ruby/spec" />
-          <root url="file://$MODULE_DIR$/../../securenative-ruby/.idea" />
-          <root url="file://$MODULE_DIR$/../../securenative-ruby/.github" />
-          <root url="file://$MODULE_DIR$/../../securenative-ruby/coverage" />
-        </SOURCES>
-        <excluded>
-          <root url="file://$MODULE_DIR$/../../securenative-ruby/bin" />
-          <root url="file://$MODULE_DIR$/../../securenative-ruby/.git" />
-          <root url="file://$MODULE_DIR$/../../securenative-ruby/spec" />
-          <root url="file://$MODULE_DIR$/../../securenative-ruby/.idea" />
-          <root url="file://$MODULE_DIR$/../../securenative-ruby/.github" />
-          <root url="file://$MODULE_DIR$/../../securenative-ruby/coverage" />
-        </excluded>
-      </library>
-    </orderEntry>
     <orderEntry type="library" scope="PROVIDED" name="actioncable (v6.0.3.3, RVM: ruby-2.7.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionmailbox (v6.0.3.3, RVM: ruby-2.7.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionmailer (v6.0.3.3, RVM: ruby-2.7.0) [gem]" level="application" />
@@ -115,6 +81,7 @@
     <orderEntry type="library" scope="PROVIDED" name="sass-rails (v6.0.0, RVM: ruby-2.7.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sassc (v2.4.0, RVM: ruby-2.7.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sassc-rails (v2.1.2, RVM: ruby-2.7.0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="securenative (v0.1.31, RVM: ruby-2.7.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="selenium-webdriver (v3.142.7, RVM: ruby-2.7.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="spring (v1.7.2, RVM: ruby-2.7.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="spring-watcher-listen (v2.0.1, RVM: ruby-2.7.0) [gem]" level="application" />
