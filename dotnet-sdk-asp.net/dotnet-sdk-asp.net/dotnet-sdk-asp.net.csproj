@@ -9,6 +9,8 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="SecureNative.SDK" Version="2.0.0" />
+    <ProjectReference Include="..\..\..\securenative-dotnet\SecureNative.SDK\SecureNative.SDK.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 </Project>

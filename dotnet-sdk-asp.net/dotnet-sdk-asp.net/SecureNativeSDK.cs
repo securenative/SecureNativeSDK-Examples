@@ -1,13 +1,12 @@
-﻿using System;
-using SecureNative.SDK.Config;
+﻿using SecureNative.SDK.Config;
 
 namespace dotnet_sdk_asp.net
 {
-    public class SecureNativeSDK
+    public static class SecureNativeSdk
     {
-        public static SecureNativeOptions options = ConfigurationManager.ConfigBuilder()
-                    .WithApiKey("246F87DD33AF3C9D2E2A55B115580AF37F849244").Build();
+        /*private static readonly SecureNativeOptions Options = ConfigurationManager.ConfigBuilder()
+                    .WithApiKey(System.Environment.GetEnvironmentVariable("SECURENATIVE_API_KEY")).Build();*/
 
-        public static SecureNative.SDK.SecureNative securenative = SecureNative.SDK.SecureNative.Init(options);
+        public static readonly SecureNative.SDK.SecureNative securenative = SecureNative.SDK.SecureNative.Init();
     }
 }
