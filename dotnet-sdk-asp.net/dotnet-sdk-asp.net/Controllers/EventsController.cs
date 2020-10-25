@@ -21,7 +21,7 @@ namespace dotnet_sdk_asp.net.Controllers
         // GET: /events/track
         public string Track()
         {
-            var context = SecureNative.SDK.SecureNative.ContextBuilder()
+            var context = SecureNative.SDK.Client.ContextBuilder()
                  .WithIp("127.0.0.1")
                  .WithClientToken(Environment.GetEnvironmentVariable("SECURENATIVE_CLIENT_TOKEN"))
                  .WithHeaders(new Dictionary<string, string> { { "user-agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" } })
